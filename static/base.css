@@ -1,0 +1,208 @@
+#chat {
+    overflow-y: auto;
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 80%;
+    height: 350px;
+    border-radius: 5px;
+    margin: auto;
+}
+  
+ul {
+    width: 80%;
+    overflow-wrap: break-word;
+}
+  
+  li:first-child {
+    margin-top:0;
+  }
+  
+  li{
+    list-style: none;
+    margin-top: 10px;
+    background-color:aquamarine;  
+    width: -moz-fit-content;  
+    width: fit-content;  
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 40px;
+    padding: 8px 5px 8px 45px;
+  }
+  
+  form {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    border-width: 0px;
+  }
+  
+  input {
+    width: 100%;
+    height: 25px;
+    font-size: 12.5px;
+    margin-left: 5px;
+    font-weight: 600;
+  }
+  
+  span {
+    display: block;
+    overflow: hidden;
+    padding-right:10px;
+  }
+  
+  label {
+    float: left;
+    margin: auto;
+    font-size: 20px;
+  }
+  
+  #userinput {
+    margin: 10px;
+  }
+  
+  @keyframes slideInFromUp {
+    0% {
+      transform: translateY(120%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: black;
+      color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #Elizacontainer {
+    background-color: rgb(120, 198, 254);
+    padding: 15px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+  }
+  
+  h1 {
+    text-align: CENTER;
+    font-size: 60px;
+    font-weight: 900;
+      color: white;
+    margin: -20px;
+    margin-bottom: -30px;
+    padding: 0;
+  }
+  
+  h2 {
+    width: 82%;
+    margin: auto;
+  }
+  
+  .emoji{
+    display:inline-block;
+  }
+  
+  
+  .emoji:before {
+    content: '😄';
+  }
+  
+  .emoji:hover:before {
+    content: '🥰';
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(120%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-120%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  #emoji1 {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  
+  #emoji2 {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+  }
+  
+  #playerpf, #Elizapf {
+    width: 82%;
+    height: 250px;
+    background-color:#FB3640;
+    border-radius: 5px;
+    margin: auto;
+    overflow: hidden;
+    border-width: 0px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  #playerpfp, #Elizapfp {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    max-height: 250px;
+    float: left;
+  }
+  
+  .playerInfo, .Elizainfo {
+    width: 60%;
+    float: left;
+    background-color:rgb(255, 255, 255, 0.8);
+    height: 80%;
+    margin: auto;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .playerNameInput, .ElizaNameInput {
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  #Playername, #Elizaname {
+    width: 95%;
+    margin-left: 10px;
+  }
+  
+  .playerlabel, .Elizalabel {
+    margin-left: 10px;
+  }
+  
+  .playerNameFile, .ElizaNameFile {
+    margin-left: 10px;
+    margin-bottom: 40px;
+  }
+  
+  #playerform, #Elizaform {
+    margin: 0;
+  }
+  
+  .container {
+    animation: 1s ease-out 0s 1 slideInFromUp;
+  }

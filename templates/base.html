@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Eliza</title>
+    <link href="/static/base.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+        <h1>
+            <p class="emoji" id="emoji1"></p>
+            ELIZA
+            <p class="emoji" id="emoji2"></p>
+        </h1>
+
+        <div class = "container">
+        <h2>&#127804; Edit your Eliza's Profile &#127804;</h2>
+
+         <div id="Elizapf">
+            <img id="Elizapfp" src="" />
+            <div class="Elizainfo">
+                <div class="ElizaNameInput">
+                    <form id="Elizaform">
+                        <label class="Elizalabel">Eliza's Name:</label><span><input type="text" name="input" id="Elizaname" maxlength="90" placeholder=" Eliza" /></span>
+                    </form>
+                </div>
+                <div class="ElizaNameFile">
+                    <label>Eliza's Profile Picture:</label><span> <input type="file" id="Elizafile" /> </span>
+                </div>
+            </div>
+        </div>
+
+         <h2>&#127804; Chat with the Eliza! &#127804;</h2>
+        <div id="Elizacontainer">
+            <div id="chat">
+                <ul id="output"></ul>
+            </div>
+            <div id="userinput">
+                <form action="/" method="POST" id="form">
+                    <label>Input:</label>
+
+                    <span><input type="text" name="input" id="Elizainput" maxlength="280" /></span>
+                </form>
+            </div>
+        </div>
+
+         <h2>&#127804; Edit your User Profile &#127804;</h2>
+        <div id="playerpf">
+            <img id="playerpfp" src="" />
+            <div class="playerInfo">
+                <div class="playerNameInput">
+                    <form id="playerform">
+                        <label class="playerlabel">Your Name:</label><span><input type="text" name="input" id="Playername" maxlength="90" placeholder=" You" /></span>
+                    </form>
+                </div>
+                <div class="playerNameFile">
+                    <label>Your Profile Picture:</label><span> <input type="file" id="file" /> </span>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            let name = "You";
+            let Elizaname = "Eliza";
+            let Elizaurl = "https://i.pinimg.com/564x/6e/57/2b/6e572b2de740df048620481f43c13f64.jpg";
+            let url = "https://www.anime-planet.com/images/characters/tooru-oikawa-59826.jpg";
+            $("#playerpfp").attr("src", url);
+            $("#Elizapfp").attr("src", Elizaurl);
+            $(document).ready(function () {
+                convo = "Eliza: Hi there, how are you?";
+                $("#output").html("<li>" + convo + "</li>");
+                let list = document.getElementById("output").querySelectorAll("li");
+                list.forEach((item, index) => {
+                    if (index % 2 == !0) {
+                        item.style.backgroundColor = "#8768F2";
+                        item.style.backgroundImage = "url('" + url + "')";
+                    } else {
+                        item.style.backgroundImage = "url('" + Elizaurl + "')";
+                    }
+                });
+                $("#form").on("submit", function (e) {
+                    $.ajax({
+                        data: {
+                            msg: $("#Elizainput").val(),
+                            chatlog: convo,
+                            name: name,
+                            Elizaname: Elizaname
+                        },
+                        type: "POST",
+                        url: "/",
+                    }).done(function (data) {
+                        if (data !== "empty") {
+                            convo += "<li>" + data;
+                            $("#output").html("<li>" + convo + "</li>");
+
+                            let list = document.getElementById("output").querySelectorAll("li");
+                            list.forEach((item, index) => {
+                                if (index % 2 == !0) {
+                                    item.style.backgroundColor = "#8768F2";
+                                    item.style.backgroundImage = "url('" + url + "')";
+                                } else {
+                                    item.style.backgroundImage = "url('" + Elizaurl + "')";
+                                }
+                            });
+
+                            //sscroll bar at the bottom
+                            var chatHistory = document.getElementById("chat");
+                            chatHistory.scrollTop = chatHistory.scrollHeight;
+                        }
+                    });
+                    $("#Elizainput").val(" "); ///clear input
+                    e.preventDefault();
+                });
+            });
+            //set user name
+            $("#playerform").on("submit", function (e) {
+              let value = $("#Playername").val().trim();
+              if (value !== "") {
+                name = value;
+                $("#Playername").val("");
+                $("#Playername").attr("placeholder", " " + name);
+              } else {
+                alert("Please submit a valid name");
+              }
+              e.preventDefault();
+            });
+
+            //set Eliza name
+            $("#Elizaform").on("submit", function (e) {
+              let value = $("#Elizaname").val().trim();
+              if (value !== "") {
+                Elizaname = value;
+                $("#Elizaname").val("");
+                $("#Elizaname").attr("placeholder", " " + Elizaname);
+              } else {
+                alert("Please submit a valid name");
+              }
+              e.preventDefault();
+            });
+
+            //listen for file input of User pfp
+            window.addEventListener("load", function () {
+                document.getElementById('file').value = "";
+                document.getElementById('file').addEventListener("change", function () {
+                    if (this.files && this.files[0]) {
+                        url = URL.createObjectURL(this.files[0]);
+                        $("#playerpfp").attr("src", url);
+                    }
+                });
+            });
+
+            //listen for file input of Eliza pfp
+            window.addEventListener("load", function () {
+                document.getElementById('Elizafile').value = "";
+                document.getElementById('Elizafile').addEventListener("change", function () {
+                    if (this.files && this.files[0]) {
+                        Elizaurl = URL.createObjectURL(this.files[0]);
+                        $("#Elizapfp").attr("src", Elizaurl);
+                    }
+                });
+            });
+        </script>
+</body>
