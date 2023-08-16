@@ -1,3 +1,5 @@
+
+
 #chat {
     overflow-y: auto;
     background-color: rgb(255, 255, 255, 0.8);
@@ -5,6 +7,7 @@
     height: 350px;
     border-radius: 5px;
     margin: auto;
+    color: #383737;
 }
   
 ul {
@@ -19,7 +22,7 @@ ul {
   li{
     list-style: none;
     margin-top: 10px;
-    background-color:aquamarine;  
+    background-color: #9493DA;  
     width: -moz-fit-content;  
     width: fit-content;  
     border-radius: 5px;
@@ -40,7 +43,6 @@ ul {
     width: 100%;
     height: 25px;
     font-size: 12.5px;
-    margin-left: 5px;
     font-weight: 600;
   }
   
@@ -71,7 +73,7 @@ ul {
   
   body {
       font-family: 'IBM Plex Sans', sans-serif;
-      background-color: black;
+      background-color: ;
       color: white;
     margin: 0;
     padding: 0;
@@ -102,8 +104,16 @@ ul {
     text-align: center;
     font-size: 60px;
     font-weight: 900;
-    color: white;
+    color: #2c9798;
     padding: 0;
+  }
+
+  h2 {
+
+    font-size: 30px;
+    font-weight: 900;
+    color: #2c9798;
+    padding: 16px;
   }
 
 
@@ -150,7 +160,7 @@ ul {
   #playerpf, #Elizapf {
     width: 82%;
     height: 250px;
-    background-color:#FB3640;
+    background-color:#EBF6FC94;
     border-radius: 5px;
     margin: auto;
     overflow: hidden;
