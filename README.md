@@ -28,11 +28,11 @@ Eliza chatbot implementation
 
 4. **Install dependencies:**
 
-  Navigate to the project folder and run the following command to install dependencies:
+   Navigate to the project folder and run the following command to install dependencies:
 
    📌 pip install -r requirements.txt
 
-  This will install the necessary libraries, including Flask and dadjokes.
+   This will install the necessary libraries, including Flask and dadjokes.
 
 ## 👨‍💻 Running the Project
 
