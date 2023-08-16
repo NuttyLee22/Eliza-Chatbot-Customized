@@ -79,7 +79,7 @@ ul {
   }
   
   #Elizacontainer {
-    background-color: rgb(120, 198, 254);
+    background-color: #7289da;
     padding: 15px;
     margin: auto;
     margin-top: 20px;
@@ -88,34 +88,37 @@ ul {
     border-radius: 5px;
     color: black;
     font-weight: 600;
+    border: 1px solid #ccc;
   }
+
+  .headerText {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
   
   h1 {
-    text-align: CENTER;
+    text-align: center;
     font-size: 60px;
     font-weight: 900;
-      color: white;
-    margin: -20px;
-    margin-bottom: -30px;
+    color: white;
     padding: 0;
   }
-  
-  h2 {
-    width: 82%;
-    margin: auto;
-  }
-  
+
+
+
   .emoji{
     display:inline-block;
   }
   
   
   .emoji:before {
-    content: '😄';
+    content: '🤖';
   }
   
   .emoji:hover:before {
-    content: '🥰';
+    content: '🤗';
   }
   
   @keyframes slideInFromRight {
