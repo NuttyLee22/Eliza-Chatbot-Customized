@@ -1,11 +1,19 @@
 # Eliza-Chatbot-Customized
-Eliza Chatbot Implementation 🤖
 
-Eliza was one of the first chatbots developed back in the 1960s. It simulated a psychotherapist, engaging users in conversations that felt surprisingly real for its time. 
+   Eliza Chatbot Implementation 🤖
 
-This is the challenge proposed by I2A2 - Institut d'Intelligence Artificielle Appliquée .
+   Eliza was one of the first chatbots developed back in the 1960s. It simulated a psychotherapist, engaging users in conversations that felt surprisingly real for its time. 
 
-Built using Python and Flask, this app try to replicate Eliza's behavior. 
+   This is the challenge proposed by I2A2 - Institut d'Intelligence Artificielle Appliquée .
+
+   Built using Python and Flask, this app try to replicate Eliza's behavior. 
+
+## 📷 Screenshots 
+
+   ![print-1](https://github.com/NuttyLee22/Eliza-Chatbot-Customized/assets/68132085/f805c7a8-9e89-40ee-b625-2ca7aa83142e)
+
+   ![print-2](https://github.com/NuttyLee22/Eliza-Chatbot-Customized/assets/68132085/dfa2de7e-f7fa-410b-9541-2178608cc4ad)
+
 
 ## 📝 Prerequisites
 
