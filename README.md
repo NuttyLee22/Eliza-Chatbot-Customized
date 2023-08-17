@@ -1,5 +1,19 @@
 # Eliza-Chatbot-Customized
-Eliza chatbot implementation
+
+   Eliza Chatbot Implementation 🤖
+
+   Eliza was one of the first chatbots developed back in the 1960s. It simulated a psychotherapist, engaging users in conversations that felt surprisingly real for its time. 
+
+   This is the challenge proposed by I2A2 - Institut d'Intelligence Artificielle Appliquée .
+
+   Built using Python and Flask, this app try to replicate Eliza's behavior. 
+
+## 📷 Screenshots 
+
+   ![print-1](https://github.com/NuttyLee22/Eliza-Chatbot-Customized/assets/68132085/f805c7a8-9e89-40ee-b625-2ca7aa83142e)
+
+   ![print-2](https://github.com/NuttyLee22/Eliza-Chatbot-Customized/assets/68132085/dfa2de7e-f7fa-410b-9541-2178608cc4ad)
+
 
 ## 📝 Prerequisites
 
@@ -16,7 +30,7 @@ Eliza chatbot implementation
 
    Pip is the Python package manager and is usually installed along with Python. To check if you have it installed, run the following command in your terminal:
 
-   📌 pip --version
+      📌 pip --version
 
    If it's not installed, you can follow the instructions to install Pip at: [pip.pypa.io](https://pip.pypa.io/en/stable/installation/)
 
@@ -24,13 +38,13 @@ Eliza chatbot implementation
 
    Clone this repository to your computer using the command:
 
-   📌 git clone https://github.com/NuttyLee22/Eliza-Chatbot-Customized.git
+     📌 git clone https://github.com/NuttyLee22/Eliza-Chatbot-Customized.git
 
 4. **Install dependencies:**
 
    Navigate to the project folder and run the following command to install dependencies:
 
-   📌 pip install -r requirements.txt
+    📌 pip install -r requirements.txt
 
    This will install the necessary libraries, including Flask and dadjokes.
 
@@ -40,15 +54,16 @@ Eliza chatbot implementation
  
   Navigate to the project folder in the terminal and execute the following command to start the Flask server:
 
-  📌 python app.py
+   📌 python app.py
 
   The server should be up and running, and you can access the app by the url your terminal is showing`.
 
 2. **Access the App:**
 
-  Open your web browser and go to the url that was shown to view the app.
+   Open your web browser and go to the url that was shown to view the app.
 
 ---
+
 
 
 
