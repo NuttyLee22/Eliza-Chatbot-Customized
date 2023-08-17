@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, url_for, request
 import random
 import string
 from dadjokes import Dadjoke

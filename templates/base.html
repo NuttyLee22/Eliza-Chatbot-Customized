@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Eliza</title>
+    <title>Eliza Chatbot</title>
     <link href="/static/base.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
+    <!-- O 'url_for' é usado para gerar o URL correto para arquivos estáticos no Flask. 
+        Ele ajuda a lidar com caminhos e configurações automaticamente.
+        O 'static' é o nome do diretório onde arquivos estáticos como imagens, CSS e scripts são armazenados.
+        O 'filename' é o nome do arquivo específico dentro do diretório 'static'.
+    -->
 </head>
 
 <body>
@@ -15,39 +23,44 @@
             </h1>
             <h2> Your Psychotherapist</h2>
         </div>
+
+        
    
 
         
-        <h2>🙋‍♀️ User Profile </h2>
+        <h2 style="color: #7cb2c3" >🙋‍♀️ User Profile </h2>
         <div id="playerpf">
             <img id="playerpfp" src="" />
+            
             <div class="playerInfo">
                 <div class="playerNameInput">
                     <form id="playerform">
-                        <label class="playerlabel">Your Name:</label><span><input type="text" name="input" id="Playername" maxlength="90" placeholder=" You" /></span>
+                        <label class="playerlabel">Your Name:</label><span><input type="text"  name="input" id="Playername" maxlength="90" placeholder=" You" /></span>
                     </form>
                 </div>
                 <div class="playerNameFile">
-                    <label>Your Profile Picture:</label><span> <input type="file" id="file" /> </span>
+                    <label>Your Profile Picture:</label><span> <input class="inputUser" type="file" id="file" style="margin-left: 10px;" /> </span>
                 </div>
+                
             </div>
         </div>
 
         
 
-         <h2>👩‍💻 Chat with the Eliza! </h2>
+         <h2 style="color: #7cb2c3" >👩‍💻 Chat with the Eliza! </h2>
         <div id="Elizacontainer">
+        
             <div id="chat">
                 <ul id="output"></ul>
             </div>
             <div id="userinput">
                 <form action="/" method="POST" id="form">
-                    <label>Input:</label>
-
-                    <span><input type="text" name="input" id="Elizainput" maxlength="280" /></span>
+                  <div class="input-container">
+                    <input type="text" placeholder="Type your message here:" name="input" id="Elizainput" maxlength="280">
+                    <button type="submit" class="send-button"><i class="fas fa-paper-plane"></i></button>
+                  </div>
                 </form>
-            </div>
-        </div>
+              </div>
 
     
         </div>
@@ -57,8 +70,8 @@
         <script type="text/javascript">
             let name = "You";
             let Elizaname = "Eliza";
-            let Elizaurl = "../img/robot-icon.gif";
-            let url = "../img/profile-icon.png";
+            let Elizaurl = "{{ url_for('static', filename='img/robot-icon.gif') }}";
+            let url = "{{ url_for('static', filename='img/profile-icon.png') }}";
             $("#playerpfp").attr("src", url);
             $("#Elizapfp").attr("src", Elizaurl);
             $(document).ready(function () {
@@ -67,7 +80,7 @@
                 let list = document.getElementById("output").querySelectorAll("li");
                 list.forEach((item, index) => {
                     if (index % 2 == !0) {
-                        item.style.backgroundColor = "#8768F2";
+                        item.style.backgroundColor = "#70b1ff";
                         item.style.backgroundImage = "url('" + url + "')";
                     } else {
                         item.style.backgroundImage = "url('" + Elizaurl + "')";
@@ -91,7 +104,7 @@
                             let list = document.getElementById("output").querySelectorAll("li");
                             list.forEach((item, index) => {
                                 if (index % 2 == !0) {
-                                    item.style.backgroundColor = "#8768F2";
+                                    item.style.backgroundColor = "#70b1ff";
                                     item.style.backgroundImage = "url('" + url + "')";
                                 } else {
                                     item.style.backgroundImage = "url('" + Elizaurl + "')";
